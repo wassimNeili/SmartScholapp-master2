@@ -17,11 +17,8 @@ public class AuthentificationServiceImp {
     public User register(RegisterRequest request) {
         var user = User.builder()
                 .nom(request.getNom())
-
                 .email(request.getEmail())
                 .password((request.getPassword()))
-                .role(request.getRole())
-                .expertise(request.getExpertise())
                 .build();
         var savedUser = repository.save(user);
         return savedUser;

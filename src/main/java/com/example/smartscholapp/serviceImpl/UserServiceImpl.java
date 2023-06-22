@@ -5,6 +5,8 @@ import com.example.smartscholapp.DAO.UserRepository;
 import com.example.smartscholapp.Service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
@@ -13,6 +15,12 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
     }
 
+
+
+    @Override
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
     @Override
     public User createUser(User user) {
         // Implement the logic to create a user

@@ -6,12 +6,10 @@ import com.example.smartscholapp.Model.User;
 import com.example.smartscholapp.serviceImpl.AuthentificationServiceImp;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/Auth")
 @CrossOrigin(origins = "*")
 public class AuthentificationController  {
 
