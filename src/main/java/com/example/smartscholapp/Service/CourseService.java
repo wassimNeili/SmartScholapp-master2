@@ -1,19 +1,23 @@
 package com.example.smartscholapp.Service;
 
 import com.example.smartscholapp.Model.Course;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
 public interface CourseService {
-    List<Course> getAllCourses();
+
 
     Course getCourseById(Long id);
 
-    Course createCourse(Course course);
+    Course addCourse(Course course, MultipartFile pdfFile);
+    List<Course> getAllCourses();
 
     Course updateCourse(Course course);
 
     void deleteCourse(Long id);
+
+
 
     // Add additional methods for course management as needed
 }
